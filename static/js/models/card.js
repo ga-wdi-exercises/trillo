@@ -11,5 +11,11 @@ var Card = function( description ){
 Card.prototype = {
   save: function(){
     trillo.cards[this.id] = this	
+  },
+  update: function( props ){
+    for( var prop in props ){
+      this[prop] = props[prop]
+    }	  
+    this.save()
   }
 }
