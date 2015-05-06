@@ -1,5 +1,6 @@
 // CardView
 var CardView = function( card ){
+  this.card = card
   this.container = document.createElement("div")
   // displaying the card
   this.container.className = "card"
@@ -15,6 +16,7 @@ var CardView = function( card ){
     card.update({completed: completed})
     trilloView.render()
   })
+  this.description.addEventListener("click", this.editCard.bind(this) )
   this.container.appendChild( input )
   return this.container
   // allow completion check
@@ -24,7 +26,17 @@ CardView.prototype = {
   toggleCompleted: function( event ){
     alert("yeah")
   },
-  showCard: function(){
-      	    
+  editCard: function( event ){
+    var input = document.createElement("input")
+    input.value = this.description.innerHTML
+    this.container.removeChild( this.description )
+    this.container.appendChild( input )
+    input.addEventListener("keyup", function( event ){
+      if( event.keyCode == 13 ){
+        var value = input.value
+        this.card.update({description: value})
+        trilloView.render()
+      }
+    }.bind(this))
   }
 }
