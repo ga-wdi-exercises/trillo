@@ -1,4 +1,9 @@
 // CardView
+
+// creates a single view for each card
+// creates a new div for the card then add the description and completed to that div inside a different html attribute
+// add event listener to completed checkbox
+// add event listener to description to edit 
 var CardView = function( card ){
   this.card = card
   this.container = document.createElement("div")
@@ -22,6 +27,10 @@ var CardView = function( card ){
   // allow completion check
 }
 
+// methods of CardView
+// anytime completed is clicked it will alert with yeah
+// edit card removes the old descripton then appends the input of the new one
+// 
 CardView.prototype = {
   toggleCompleted: function( event ){
     alert("yeah")
