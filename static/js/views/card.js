@@ -7,3 +7,6 @@ var CardView = function( card ){
   return li
   // allow completion check
 }
+
+//views allow us to display.  The above is the display for the card (console.log).
+//li creates HTML list format so that cards are displayed properly. 
