@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Trillo</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <h1>Trillo</h1>
+    <p><i>A Milk-n-Cookies Product</i></p>
+
+    <%= yield %>
+
+  </body>
+</html>
