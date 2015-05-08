@@ -12,7 +12,10 @@ class CardsController < ApplicationController
       @cards = Card.all
     end
 
-    render json: @cards
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @cards }
+    end
   end
 
   def show
