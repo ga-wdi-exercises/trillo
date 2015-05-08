@@ -10,7 +10,7 @@ Card.prototype = {
       type: 'POST',
       data: { card: {description: this.description, completed: this.completed}},
       dataType: 'json',
-      url: "http://localhost:3000/cards"
+      url: "/cards"
     }).done(function(response){
       console.log("model saved")
       trilloModel.fetchCards();
@@ -23,7 +23,7 @@ Card.prototype = {
       type: 'PUT',
       data: {card: data},
       dataType: 'json',
-      url: "http://localhost:3000/cards/" + this.id
+      url: "/cards/" + this.id
     }).done(function(response){
       trilloModel.fetchCards();
       console.log("model updated")

@@ -8,7 +8,7 @@ Trillo.prototype = {
     $.ajax({
       type: 'GET',
       dataType: 'json',
-      url: "http://localhost:3000/cards"
+      url: "/cards"
     }).done(function(response) {
       trilloModel.loadCards(response);
       trilloView.render();
