@@ -1,5 +1,7 @@
 # Trillo!
 
+This repo has 7 branches.
+
 This demonstrates the progression of Trillo from an HTML/JS/CSS site making requests to an external API, to a full-stack Rails app that makes AJAX requests to itself.
 
 Each branch of this repo represents a different step in the process. See the progress made in each step by clicking the Pull Requests button to the right and "comparing" two different branches.
