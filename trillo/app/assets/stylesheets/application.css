@@ -75,18 +75,29 @@ h1, p {
   list-style: none;
 }
 
-.card {
-  box-sizing: padding-box;
-
-  width: 90%;
-  padding: 12px;
-  margin: 12px 0;
+.card label{
+  display:block;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+  cursor:pointer;
 
   border-radius: 5px;
   border-bottom: 1px solid #bbb;
   border-right: 1px solid #bbb;
 
   background-color: #f7f7f7;
+}
+
+.card label:hover
+{
+  background-color:#fff;
+}
+
+.card label:active
+{
+  background-color:#eee;
 }
 
 .card .delete {
@@ -97,8 +108,10 @@ h1, p {
 }
 
 .card .finish {
-  color: #29b162;
-  margin-left: 12px;
-  float: right;
-  cursor: pointer;
+  display:block;
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  opacity:0.01;
 }
