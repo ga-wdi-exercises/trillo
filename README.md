@@ -1,6 +1,6 @@
 # Trillo!
 
-This repo has 7 "releases" (tas).
+This repo has 7 "releases" (tags).
 
 This demonstrates the progression of Trillo from an HTML/JS/CSS site making requests to an external API, to a full-stack Rails app that makes AJAX requests to itself. Each release of this repo represents a different step in the process.
 
